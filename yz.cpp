@@ -22,10 +22,10 @@ public:
         int ulp_u=findUPar(u);
         int ulp_v=findUPar(v);
         if(ulp_u==ulp_v) return;
-        if(rank[ulp_u]<rank[ulp_v]) parent[u]=ulp_v;
-        else if(rank[ulp_u]>rank[ulp_v]) parent[v]=ulp_u;
+        if(rank[ulp_u]<rank[ulp_v]) parent[ulp_u]=ulp_v;
+        else if(rank[ulp_u]>rank[ulp_v]) parent[ulp_v]=ulp_u;
         else{
-            parent[u]=ulp_v;
+            parent[ulp_u]=ulp_v;
             rank[ulp_v]++;
         }
     }
